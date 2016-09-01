@@ -1,0 +1,285 @@
+// Animation Flicker Fix
+.backface-hidden { 
+	@include backface-visibility(hidden);
+}
+
+//////// Global Styles [START] //////// 
+
+.clearfix:before, 
+.clearfix:after { 
+	content: ""; 
+	display: table; 
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+
+.clearfix { 
+	zoom: 1; 
+}
+
+.clear-both {
+	clear: both;
+}
+
+* {
+	@include box-sizing;
+	@include font-smoothing;
+
+	margin: 0;
+}
+
+html, 
+body { 
+	font-size: 10px;
+
+	@include respond-to(iphone5-portrait) {
+		font-size: 9px;
+	}
+
+	@include respond-to(large-screens) {
+		font-size: 12px;
+	}
+} 
+
+.main-wrapper { 
+	width: 100%; 
+	min-height: 100%; 
+
+	&.menu-exposed {
+		overflow: hidden;
+		height: 100% !important;
+
+		@include respond-to(small-screens) {
+			overflow: scroll;
+			height: auto !important;
+		}
+	}
+}
+
+.main-page-wrapper {
+	width: 100%; 
+
+	.main-page-content {
+		width: 100%;
+		padding: 0;
+
+		@include respond-to(small-screens) {
+			padding-left: 10em;
+		}
+
+		@include respond-to(medium-screens) {
+			padding-left: 15em;
+		}
+
+		@include respond-to(large-screens) {
+			padding-left: 20em;
+		}
+
+		.intro-headlines {
+			position: relative;
+			display: table;
+			height: 25em;
+			width: 100%;
+			padding: 2em 3em 4em;
+			background: $color-white;
+
+			@include respond-to(large-screens) {
+				padding: 2em 3em 5em;
+			}
+
+			.h1 {
+				@include font-coper(book);
+				@include base-medium-transition;
+
+				position: relative;
+				display: table-cell;
+				vertical-align: bottom;
+			}
+
+			.curious {
+				@include font-league;
+
+				color: $color-darkgrey;
+				letter-spacing: .05em;
+			}
+
+			.by-design {
+				@include font-coper(bold-italic);
+				@include animation-duration(2s);
+				@include animation-delay(3s);
+
+				color: $color-darkgrey;
+	  			// letter-spacing: .05em;
+			}
+
+			&.sub {
+				.h1 {
+					font-size: 2.4em;	
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	clear: both; 
+	height: 6em;
+	position: relative;
+	width: 100%;
+	display: table;
+
+	@include respond-to(small-screens) {
+		padding-left: 10em;
+	}
+
+	@include respond-to(medium-screens) {
+		padding-left: 15em;
+		height: 10em;
+	}
+
+	@include respond-to(large-screens) {
+		padding-left: 20em;
+	}
+	
+	.footer-content {
+		background: $color-darkgrey;
+		width: 100%;
+		padding: 0 1em;
+		display: table-cell;
+		vertical-align: middle;
+
+		@include respond-to(medium-screens) {
+			padding: 0 1.5em;
+		}
+	}
+
+	.pramod-logo-link {
+		color: $color-grey;
+		font-size: 2.4em;
+
+		.name-logo {
+			@include base-short-transition;
+
+			width: 250px;
+			opacity: 0.8;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: $color-white;
+
+			.name-logo {
+				opacity: 1;
+			}
+		}
+	}
+
+	.pramod-copyright {
+		@include font-sourcesans(normal);
+
+		color: $color-grey;
+		margin: 0;
+		text-align: right;
+	}
+}
+
+
+// Type Styling
+a { 
+	@include base-short-transition;
+	@extend .backface-hidden;
+
+	color: $color-limegreen;
+
+	&:hover { 
+		color: $color-grey; 
+	}
+}
+
+p { 
+	@include font-coper(book);
+
+	font-size: 1.6em;
+	line-height: 2em;
+	margin-bottom: 1em;
+	color: $color-darkgrey; 
+
+	@include respond-to(smaller-screens) {
+		line-height: 2.4em;
+	}
+
+	@include respond-to(medium-screens) {
+		font-size: 1.8em;
+		line-height: 2.6em;
+	}
+
+	small { 
+		font-size: .7em;
+	}
+}
+
+li { 
+	font-size: 1.4em;
+	color: $color-darkgrey; 
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5 { 
+	margin: 10px 0; 
+	font-weight: bold; 
+}
+
+h1,
+.h1 {
+	font-size: 2.7em;
+
+	@include respond-to(medium-screens) {
+		font-size: 3.2em;
+	}
+} 
+
+h2,
+.h2 {
+	font-size: 2.4em;
+} 
+
+h3,
+.h3 {
+	font-size: 2em;
+} 
+
+h4,
+.h4 {
+	@include font-coper(semibold);
+
+	font-size: 1.8em;
+	margin-bottom: 2em;
+
+	@include respond-to(medium-screens) {
+		font-size: 2.4em;
+	}
+} 
+
+h5,
+.h5 {
+	font-size: 1.6em;
+} 
+
+h6,
+.h6 {
+	font-size: 1.4em;
+}
+
+.breakpoint-large-screen-show,
+.breakpoint-medium-screen-show,
+.breakpoint-small-screen-show {
+	display: none;
+}
+
+//////// Global Styles [END] //////// 

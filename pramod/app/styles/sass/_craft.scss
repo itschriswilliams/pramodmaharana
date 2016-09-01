@@ -1,0 +1,156 @@
+.craft.main-page-content {
+	.intro-bg {
+		position: relative;
+		width: 100%;
+		height: 50em;
+
+		@include respond-to(smaller-screens) {
+			height: 60em;
+		}
+
+		.craft-bw {
+			background: url(../images/craft/Craft-Header-B&W.jpg) no-repeat;
+			background-position: 65% 50%;
+			background-size: cover;
+			position: relative;
+			z-index: 2;
+			width: 100%; 
+			height: 50em;
+
+			@include respond-to(smaller-screens) {
+				height: 60em;
+			}
+
+			@include respond-to(medium-screens) {
+				background: url(../images/craft/Craft-Header-B&W.jpg) no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+			}
+
+			&.brand-identity-header {
+				background: url(../images/craft/Craft-BI-Header-B&W.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-BI-Header-B&W.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+
+			&.art-direction-header {
+				background: url(../images/craft/Craft-AD-Header-B&W.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-AD-Header-B&W.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+
+			&.graphic-design-header {
+				background: url(../images/craft/Craft-GD-Header-B&W.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-GD-Header-B&W.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+		}
+
+		.craft-color {
+			background: url(../images/craft/Craft-Header-B&W-Blur.jpg) no-repeat;
+			background-position: 65% 50%;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%; 
+			height: 50em;
+
+			@include respond-to(smaller-screens) {
+				height: 60em;
+			}
+
+			@include respond-to(medium-screens) {
+				background: url(../images/craft/Craft-Header-B&W-Blur.jpg) no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+			}
+
+			&.brand-identity-header {
+				background: url(../images/craft/Craft-BI-Header-B&W-Blur.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-BI-Header-B&W-Blur.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+
+			&.art-direction-header {
+				background: url(../images/craft/Craft-AD-Header-B&W-Blur.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-AD-Header-B&W-Blur.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+
+			&.graphic-design-header {
+				background: url(../images/craft/Craft-GD-Header-B&W-Blur.jpg) no-repeat;
+				background-position: 65% 50%;
+				background-size: cover;
+
+				@include respond-to(medium-screens) {
+					background: url(../images/craft/Craft-GD-Header-B&W-Blur.jpg) no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+				}
+			}
+		}
+	}
+
+	.content-area {
+		background-color: $color-yellow;
+		position: relative;
+		width: 100%;
+		padding: 7em 3em;
+
+		@include respond-to(xsmall-screens) {
+			padding: 8em 4em;
+		}
+
+		@include respond-to(smaller-screens) {
+			padding: 10em 4em;
+		}
+
+		@include respond-to(small-screens) {
+			padding: 12em 10em;
+		}
+	
+		&.brand-identity {
+			background-color: $color-brand-identity-hover;
+		}
+	
+		&.graphic-design {
+			background-color: $color-graphic-design-hover;
+		}
+	
+		&.art-direction {
+			background-color: $color-art-direction-hover;
+		}
+	}
+}

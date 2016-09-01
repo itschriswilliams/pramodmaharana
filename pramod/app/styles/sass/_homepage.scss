@@ -1,0 +1,174 @@
+.homepage.main-page-content {
+	.intro-bg {
+		background: url(../images/homepage/home-header-bg.jpg) no-repeat;
+		background-position: 65% 50%;
+		background-size: cover;
+		position: relative;
+		width: 100%; 
+		height: 50em;
+
+		@include respond-to(smaller-screens) {
+			height: 60em;
+		}
+
+		@include respond-to(medium-screens) {
+			background: url(../images/homepage/home-header-bg-fade.jpg) no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+	}
+
+	.skrollr-square-wood {
+		position: relative;
+		width: 100%;
+		margin-top: -50%;
+		max-height: 21.2em;
+
+		@include respond-to(xsmall-screens) {
+			margin-top: -25%;
+		}
+
+		@include respond-to(medium-screens){
+			margin-top: -17em;
+			max-height: 17em;
+			max-width: 85em;
+		}
+
+		.square-wood {
+			width: 50%;
+
+			@include respond-to(xsmall-screens) {
+				width: 25%;
+				margin-left: 25%;
+			}
+
+			@include respond-to(medium-screens) {
+				width: 20%;
+				margin-left: 60%;
+			}
+		}
+	}
+
+	.skrollr-wrapper {
+		background-color: $color-beige;
+
+		.skrollr-squares {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+
+			@include respond-to(medium-screens) {
+				max-width: 85em;
+			}
+
+			.squares {
+				width: 50%;
+				float: left;
+
+				@include respond-to(xsmall-screens) {
+					width: 25%;
+				}
+
+				@include respond-to(medium-screens) {
+					width: 20%;
+				}
+			}
+
+			.square-one-plus-one {
+				display: none;
+
+				@include respond-to(xsmall-screens) {
+					display: block;
+				}
+			}
+
+			.square-vendome {
+				display: none;
+
+				@include respond-to(xsmall-screens) {
+					display: block;
+				}
+			}
+
+			.square-lightbulb {
+
+				@include respond-to(xsmall-screens) {
+					float: right;
+				}
+			}
+
+			.square-mountain {
+				@include respond-to(xsmall-screens) {
+					margin-right: 25%;
+					float: right;
+				}
+
+				@include respond-to(medium-screens) {
+					float: left;
+					margin-right: auto;
+				}
+			}
+
+			.square-circle-triangle {
+				@include respond-to(xsmall-screens) {
+					margin-left: 25%;
+				}
+
+				@include respond-to(medium-screens) {
+					margin-left: 40%;
+					float: none;
+				}
+			}
+		}
+	}
+
+	.content-area {
+		background-color: $color-beige;
+		position: relative;
+		width: 100%;
+		padding: 7em 3em;
+		p {
+			@include font-coper(medium);
+		}
+		@include respond-to(xsmall-screens) {
+			padding: 8em 4em;
+			p,h2 {
+				max-width: 100%;
+			}			
+		}
+
+		@include respond-to(smaller-screens) {
+			padding: 10em 4em;
+		}
+
+		@include respond-to(small-screens) {
+			padding: 12em 10em;
+			p,h2 {
+				max-width: 80%;
+			}
+
+			p {
+				font-size: 2.4em;
+				line-height: 2.2em;
+				margin-bottom: 1.5em;			
+			}			
+		}
+	}
+
+	.pramod-rian-bg {
+		background: url(../images/homepage/home-pramod-rian.jpg) no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		position: relative;
+		width: 100%;
+		height: 35em;
+
+		@include respond-to(smaller-screens) {
+			height: 50em;
+		}
+
+		@include respond-to(medium-screens) {
+			height: 60em;
+		}
+	}
+}

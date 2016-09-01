@@ -1,0 +1,17 @@
+{
+  "name": "pramod1",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "modernizr": "~2.8.3",
+    "lodash": "~3.8.0",
+    "gsap": "~1.16.1",
+    "slick.js": "~1.5.5",
+    "bourbon": "~4.2.3",
+    "textillate": "~0.4.0",
+    "letteringjs": "~0.7.0",
+    "animate.css": "~3.3.0",
+    "skrollr": "~0.6.30"
+  },
+  "devDependencies": {}
+}

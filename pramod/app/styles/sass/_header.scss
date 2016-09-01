@@ -1,0 +1,264 @@
+// Header Section Styles
+.header {
+	@include base-medium-transition;
+	@include delay(.5s);
+
+	position: fixed;
+	background: $color-darkgrey;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	margin: 0 auto;
+	padding: 3.7em 2em;
+	z-index: 998;
+
+	@include respond-to(small-screens) {
+		@include background-opacity($color-darkgrey, 0.98);
+
+		padding: 7em 3em 7em 10em;
+		min-height: 56.5em;
+		height: auto;
+	}
+
+	@include respond-to(medium-screens) {
+		padding: 8em 5em 8em 15em;
+	}
+
+	@include respond-to(large-screens) {
+		padding: 8em 5em 8em 20em;
+	}
+
+	.menu-display {
+		@include base-medium-transition;
+		@include translate(0,-1em);
+
+		opacity: 0;
+
+		.logo-type {
+			margin-bottom: 3em;
+
+			@include respond-to(small-screens) {
+				margin-bottom: 5em;
+			}
+
+			.name-logo {
+				max-width: 32em;
+			}
+		}
+
+		.menu-top {
+			.header-nav-link {
+				@include base-short-transition;
+
+				opacity: 0.8;
+
+				&:hover,
+				&:focus {
+					outline: none;
+					opacity: 1;
+				}
+			}
+			.menu-top-menu {
+				list-style-type: none;
+				float: right;
+				margin: .3em 0;
+				padding: 0;
+				display: none;
+				text-align: center;
+
+				.menu-top-nav {
+					float: left;
+					margin-left: 3em;
+				}
+
+				.menu-top-nav-link {
+					@include font-sourcesans(600);
+					@include backface-visibility(hidden);						
+
+					color: $color-grey;
+					font-size: 1.4em;
+					border-bottom: 1px solid transparent;
+
+					&:hover,
+					&:focus {
+						outline: none;
+						color: $color-yellow;
+						border-bottom: 1px solid $color-yellow;
+					}
+				}
+
+				@include respond-to(small-screens) {
+					display: block;
+				}
+			}
+		}
+
+		.menu-header {
+			margin-bottom: 3em;
+
+			@include respond-to(iphone5-portrait) {
+				margin-bottom: 1em;
+			}
+
+			@include respond-to(small-screens) {
+				margin-bottom: 5em;
+			}
+			
+			.menu-headline {
+				@include font-league;
+
+				font-size: 2.4em;
+				color: $color-white;
+
+				.headline-link {
+					color: $color-white;
+					border-bottom: 1px solid transparent;
+
+					&:hover,
+					&:focus {
+						outline: none;
+						color: $color-yellow;
+						border-bottom: 1px solid $color-yellow;
+					}
+				}
+
+				@include respond-to(xsmall-screens) {
+					font-size: 2.7em;
+				}
+
+				@include respond-to(smaller-screens) {
+					font-size: 3em;
+					line-height: 1.6em;
+				}
+
+				@include respond-to(small-screens) {
+					font-size: 3.5em;
+				}
+			}
+		}
+
+		.select-works {
+			@include font-coper(book);
+
+			margin-bottom: 3em;
+
+			.faded-text {
+				margin-bottom: 0;
+				color: $color-grey;
+				opacity: 0.8;
+
+				@include respond-to(small-screens) {
+					font-size: 2em;
+				}
+			}
+
+			.hr-below {
+				border-bottom: 1px solid rgba($color-grey, 0.2);
+
+				@include respond-to(small-screens) {
+					border: none;
+				}
+			}
+
+			.selected-works {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				float: left;
+
+				@include respond-to(small-screens) {
+					max-width: 80%;
+				}
+
+				@include respond-to(medium-screens) {
+					max-width: 55em;
+				}
+
+				.selected-work {
+					float: none;
+
+					@include respond-to(small-screens) {
+						float: left;
+						padding: 0 1em 0 0;
+					}
+
+					.selected-work-link {
+						@include backface-visibility(hidden);
+
+						color: $color-white;
+						display: block;
+						padding: 1em 0;
+						border-bottom: 1px solid transparent;
+
+						@include respond-to(iphone5-portrait) {
+							padding: .7em 0;
+						}
+
+						@include respond-to(smaller-screens) {	
+							font-size: 1em;
+						}
+
+						@include respond-to(small-screens) {
+							color: $color-grey;						
+							padding: 0;	
+							font-size: 1.6em;
+						}
+
+						&:hover,
+						&:focus {
+							outline: none;
+							color: $color-yellow;
+							border-bottom: 1px solid $color-yellow;
+						}
+					}
+				}
+			}
+		}
+
+		.menu-footer-nav {
+			display: block;
+
+			@include respond-to(small-screens) {
+				display: none;
+			}
+
+			.menu-footer-nav-link {
+				@include font-sourcesans(400);
+
+				color: $color-white;
+				font-size: 1.4em;
+				text-transform: uppercase;
+				display: block;
+				padding: 1em .5em 0;
+				border-left: 1px solid rgba($color-grey, 0.2);
+
+				&:hover,
+				&:focus {
+					outline: none;
+					color: $color-yellow;
+					border-left: 1px solid $color-yellow;
+				}
+			}
+		}
+	}
+
+	&.expand {
+		@include delay(.5s);
+
+		opacity: 1;
+		pointer-events: auto;
+
+		.menu-display {
+			@include translate(0,0);
+			@include delay(1.2s);
+
+			opacity: 1;
+
+			@include respond-to(small-screens) {
+				@include delay(1s);
+			}
+		}
+	}
+}

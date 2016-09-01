@@ -1,0 +1,334 @@
+.projects.main-page-content {
+
+	.intro-headlines {
+		padding: 10em 2em 3em;
+		height: auto;
+	}
+
+	.projects-wrapper {
+		background-color: $color-beige;
+
+		.project {
+			max-width: 96em;
+			padding-bottom: 2em;
+
+			@include respond-to(medium-screens) {
+				padding-bottom: 10em;
+			}
+		}
+
+		.project-links {
+			position: relative;
+			display: table;
+			height: 100%;
+			width: 100%;
+
+			.overlay-wrapper {
+				@include base-medium-transition;
+
+				position: absolute;
+				opacity: 1;
+				display: block;
+				color: $color-white;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+
+				@include respond-to(small-screens) {
+					opacity: 0;
+				}
+
+				.overlay-info {
+					display: table;
+					text-align: center;
+					width: 100%;
+					height: 100%;
+
+					.info-wrapper {
+						display: table-cell;
+						vertical-align: middle;
+
+						p {
+							color: $color-white;
+						}
+
+						.h1 {
+							@include font-league;
+						}
+					}
+				}
+				
+				&.ellman {
+					@include background-opacity($color-ellman-hover, 0.8);
+				}
+
+				&.vibe-group {
+					@include background-opacity($color-vibegroup-hover, 0.8);
+				}
+
+				&.wasabi-rabbit {
+					@include background-opacity($color-wasabirabbit-hover, 0.8);
+				}
+
+				&.sysomos {
+					@include background-opacity($color-sysomos-hover, 0.8);
+				}
+
+				&.bite-size {
+					@include background-opacity($color-bitesize-hover, 0.8);
+				}
+
+				&.belle-harbour {
+					@include background-opacity($color-belle-hover, 0.8);
+				}
+
+				&:hover {
+					opacity: 1;
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	.content-area {
+		background-color: $color-projects-quote;
+		position: relative;
+		width: 100%;
+		padding: 7em 3em;
+
+		@include respond-to(xsmall-screens) {
+			padding: 8em 4em;
+		}
+
+		@include respond-to(smaller-screens) {
+			padding: 10em 4em;
+		}
+
+		@include respond-to(small-screens) {
+			padding: 12em 10em;
+		}
+	}
+
+
+	// Project Page Individual
+	.projects-wrapper {
+
+		.project.detail-page {
+			max-width: 1024px;
+			padding-bottom: 0;
+		}
+
+		.project-content-wrapper {
+			position: relative;
+			float: right;
+			max-width: 60rem;
+			padding: 12rem 4rem;
+
+			p {
+				font-size: 1.8rem;
+			}
+		}
+
+		.project-summary-area {
+			position: relative;
+			max-width: 90rem;
+			padding: 10rem;
+		}
+
+		.project-more-detail-wrapper {
+			display: block;
+
+			.more-details-content {
+				position: relative;
+				max-width: 60rem;
+				padding: 10rem 4rem;
+				float: right;
+			}
+
+			.more-detail-btn,
+			.show-less-btn {
+				@include font-opensans(500);
+
+				font-size: 1.4rem;
+				position: relative;
+				margin: 4rem 0 0;
+				color: $color-grey;
+				padding-left: 2.8rem;
+
+				.arrow {
+					@include border-radius(1rem);
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 2rem;
+					height: 2rem;
+					border: 1px solid $color-grey;
+					text-align: center;
+
+					&:before {
+						@include rotate(-90deg);
+
+						position: absolute;
+					    top: -.5rem;
+					    left: .5rem;
+					    font-size: 2rem;
+						font-family: 'pm';
+    					content: '\e80b';
+					}
+				}
+
+				&:hover {
+					color: $color-darkgrey;
+				}
+			}
+
+			.more-detail-btn {
+				@include base-short-transition;
+
+				opacity: 1;
+				pointer-events: all;
+
+				&.hide-this {
+					pointer-events: none;
+					opacity: 0;
+				}
+			}
+
+			.show-less-btn {
+				.arrow {
+					&:before {
+						@include rotate(90deg);
+						top: -.7rem;
+						left: .6rem;
+					}
+				}
+			}
+
+			.show-more-section {
+				@include base-medium-transition;
+
+				height: auto;
+				max-height: .1rem;
+
+				.show-more-content {
+					@include base-short-transition;
+
+					padding: 3rem 0 0;
+					opacity: 0;
+				}
+
+				&.read-more-section {
+					.show-more-content {
+						padding: 0;
+					}
+				}
+
+				&.show {
+					height: auto;
+					max-height: 100rem;
+
+					.show-more-content {
+						@include delay(.5s);
+
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.project-sliders {
+			display: block;
+			margin: 6rem 0;
+		}
+
+		.h4 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+			line-height: 2.2em;
+		}
+
+		.project-content-area-wrapper {
+			.project-content-area {
+				background-color: $color-ellman-project;
+				position: relative;
+				width: 100%;
+
+
+				&.vbg {
+					.project-summary-area {
+						max-width: 85rem;
+					}
+				}
+			}
+		}
+
+		.next-project {
+			.next-project-img {
+
+				width: 40%;
+				height: 28rem;
+				display: inline-block;
+				vertical-align: top;
+				overflow: hidden;
+
+				img {
+					@include base-verylong-transition;
+					@include scale(1);
+
+					max-width: none;
+					opacity: .7;
+					width: 125%;
+
+					&.scaled {
+						@include scale(1.1);
+						opacity: 1;
+					}
+				}
+			}
+
+			.next-project-link-wrapper {
+				display: inline-block;
+				vertical-align: top;
+
+				.next-project-link {
+					@include base-short-transition;
+					@include font-coper(bold);
+
+					color: $color-darkgrey;
+					display: block;
+					padding: 7rem 4rem;
+
+					.project-type {
+						font-size: 1.2rem;
+					}
+
+					.next-project-title {
+						@include base-short-transition;
+
+						display: inline-block;
+						margin-bottom: 1.2rem;
+						border-bottom: 1px solid transparent;
+					}
+
+					.h4 {
+						@include base-short-transition;
+
+						margin-bottom: .5rem;
+					}
+
+					&:hover {
+						.next-project-title {
+							border-bottom: 1px solid $color-darkgrey;
+						}
+					}
+				}
+			}
+		}
+	}
+}
